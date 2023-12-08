@@ -1,6 +1,6 @@
 # API: Predição de uma mãe fumante na gravidez
 
-Este pequeno projeto o backend da Disciplina **Desenvolvimento Full Stack Básico** desenvolvida por Luis Frade
+Este pequeno projeto o backend da Disciplina **Desenvolvimento de software inteligente** desenvolvida por Luis Frade
 
 ---
 ## Como executar 
