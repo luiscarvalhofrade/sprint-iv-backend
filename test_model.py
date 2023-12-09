@@ -22,21 +22,6 @@ dataset = loader.data_loader(url_data, columns)
 X = dataset.iloc[:, 0:-1]
 Y = dataset.iloc[:, -1]
 
-"""
-# Método para testar o modelo de Baesyan Naive a partir do arquivo correspondente
-def test_modelo_nb():  
-    # Importando o modelo de regressão logística
-    nb_path = './smoker_preditor_nb.pkl'
-    model_nb = Model.load_model(nb_path)
-
-    # Obtendo as métricas da Regressão Logística
-    accuracy_nb, recall_nb, precision_nb, f1_nb = evaluator.valuation(model_nb, X, Y)
-    
-    # Testando as métricas da Regressão Logística 
-    # Modifique as métricas de acordo com seus requisitos
-    assert accuracy_nb >= 0.75
-"""
-
 # Método para testar modelo SVM a partir do arquivo correspondente
 def test_model_svm():
     # Importando modelo de SVM
