@@ -37,7 +37,7 @@ def add_data(form: PredictionSchema):
     """
     
     path = './smoker_preditor.pkl'
-    modelo = Model.load_model(path)
+    model = Model.load_model(path)
 
     prediction = Prediction(
         bwt=form.bwt,
@@ -46,7 +46,7 @@ def add_data(form: PredictionSchema):
         age=form.age,
         height=form.height,
         weight=form.weight,
-        smoke=Model.run_prediction(modelo, form))
+        smoke=Model.run_prediction(model, form))
     
     #logger.debug(f"Adicionando predição: '{prediction.id}'")
     try:
