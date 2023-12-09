@@ -17,7 +17,7 @@ columns = ['bwt', 'parity', 'gestation', 'age', 'height', 'weight', 'smoke']
 percentual_test = 0.3
 
 # Carga dos dados
-dataset = loader.data_loader(url_data, columns).dropna()
+dataset = loader.data_loader(url_data, columns)
 
 # Separando em dados de entrada e saída
 X = dataset.iloc[:, 0:-1]
