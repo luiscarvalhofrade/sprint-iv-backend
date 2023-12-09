@@ -1,19 +1,21 @@
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 
 class PreProcessor:
 
     def pre_processor(self, dataset, percentual_test, seed=7):
         """ Cuida de todo o pré-processamento. """
-        # limpeza dos dados e eliminação de outliers
-        
-
         # divisão em treino e teste
         X_train, X_test, Y_train, Y_test = self.__prepar_holdout(dataset,
                                                                   percentual_test,
                                                                   seed)
-        # normalização/padronização
+        # usando StandardScaler()
+        scaler_train = StandardScaler().fit(X_train) # ajuste do scaler com o conjunto de treino
+        escaledX_train = scaler_train.transform(X_train)
+        scaler_test = StandardScaler().fit(X_test) # ajuste do scaler com o conjunto de treino
+        escaledX_test = scaler_test.transform(X_test)
         
-        return (X_train, X_test, Y_train, Y_test)
+        return (escaledX_train, escaledX_test, Y_train, Y_test)
     
     def __prepar_holdout(self, dataset, percentual_teste, seed):
         """ Divide os dados em treino e teste usando o método holdout.

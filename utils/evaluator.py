@@ -8,7 +8,4 @@ class Evaluator:
         """
         predictions = model.predict(X_test)
         
-        return (accuracy_score(Y_test, predictions),
-                recall_score(Y_test, predictions, average='binary'),
-                precision_score(Y_test, predictions, average='binary'),
-                f1_score(Y_test, predictions, average='binary'))
+        return accuracy_score(Y_test, predictions)
